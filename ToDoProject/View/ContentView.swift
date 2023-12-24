@@ -10,16 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        NavigationStack {
             TabView {
-                ContentView()
-                .tabItem { Label("Home", systemImage: "house.fill") }
-                ContentView()
-                .tabItem { Label("Progress", systemImage: "start.fill") }
-                ContentView()
-                .tabItem { Label("Calendar", systemImage: "calendar.fill") }
-            }
-                .navigationTitle("Your notes")
+                HomeView()
+                .tabItem { Label("Home", systemImage: "house") }
+                ProgressView()
+                .tabItem { Label("Progress", systemImage: "star.fill") }
+                CalendarView()
+                .tabItem { Label("Calendar", systemImage: "calendar") }
         }
         .padding()
     }
